@@ -28,3 +28,8 @@ Card* Shuffle(Card* deck)
 		deck[i] = tmp;
 	}
 }
+
+Card* DealHand5(uint playerNum, Card* deck)
+{
+	
+}
