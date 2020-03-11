@@ -29,7 +29,3 @@ Card* Shuffle(Card* deck)
 	}
 }
 
-Card* DealHand5(uint playerNum, Card* deck)
-{
-	
-}

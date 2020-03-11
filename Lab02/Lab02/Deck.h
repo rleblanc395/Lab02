@@ -45,6 +45,5 @@ Card deck[52];
 Card* MakeDeck(Card* deck);
 // declare function to shuffle the deck
 Card* Shuffle(Card* deck);
-// declare function to deal 5
-Card* DealHand5(uint playerNum, Card* deck);
+
 #endif // !DECKH
