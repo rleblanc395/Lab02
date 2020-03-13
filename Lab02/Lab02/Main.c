@@ -13,9 +13,9 @@ int main(int argc, char** argv)
 
 		printf("Player %d\n", i + 1);
 	
-		for (int i = 0; i < handSize; i++)
+		for (int j = 0; j < handSize; j++)
 		{
-			printf("%5s of %8s |", CardName[deck[i].value], Suit[deck[i].suit]);
+			printf("%5s of %8s |", CardName[hand[j].value], Suit[hand[j].suit]);
 		}
 		printf("\n");
 	}

@@ -1,3 +1,5 @@
+#include <time.h>
+#include <stdlib.h>
 #include "Deck.h"
 
 Card* MakeDeck(Card* deck)
