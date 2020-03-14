@@ -12,7 +12,6 @@ typedef enum suit
 
 typedef enum value
 {
-	Ace,
 	Deuce,
 	Three,
 	Four,
@@ -24,7 +23,8 @@ typedef enum value
 	Ten,
 	Jack,
 	Queen,
-	King
+	King,
+	Ace
 }CardValue;
 
 typedef struct card
@@ -34,7 +34,7 @@ typedef struct card
 }Card;
 
 //Look up table for card values
-static const char* CardName[] = { "Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+static const char* CardName[] = { "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace" };
 // Look up table for suits
 static const char* Suit[] = { "Clubs", "Diamonds", "Hearts", "Spades" };
 

@@ -5,11 +5,10 @@
 Card* MakeDeck(Card* deck)
 {
 	int index = 0;
-	//int length = 0;
 
 	for (Suits s = Clubs; s <= Spades; s++)
 	{
-		for (CardValue c = Ace; c <= King; c++)
+		for (CardValue c = Deuce; c <= Ace; c++)
 		{
 			deck[index] = (Card){ s, c };
 			index++;
