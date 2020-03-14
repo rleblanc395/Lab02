@@ -5,11 +5,19 @@
 
 int main(int argc, char** argv)
 {
+	unsigned int playerNum = 4;
 	MakeDeck(deck);
 	Shuffle(deck);
-	PlayerHands handArray[4];
 	PlayerHands winner;
+	PlayerHands* handArray = malloc(sizeof(PlayerHands) * playerNum);
 	int winNum = 1;
+	int tieCounter = 0;
+	if(argc >1)
+	if (atoi(argv[1]) > 1 && atoi(argv[1]) < 11)
+	{
+		playerNum = atoi(argv[1]);
+		handArray = malloc(sizeof(PlayerHands) * playerNum);
+	}
 	
 	printf("\n");
 	printf("\n");
@@ -31,18 +39,17 @@ int main(int argc, char** argv)
 	for (int k = 1; k < playerNum; k++)
 	{
 		if (winner.hand < handArray[k].hand)
-		{
 			winner = handArray[k];
-			winNum = k+1;
-		}
 		else if (winner.hand == handArray[k].hand && winner.highCard < handArray[k].highCard)
-		{
-			winner = handArray[k];
-			winNum = k+1;
-		}
-		else if(winner.hand == handArray[k].hand && winner.highCard == handArray[k].highCard)
-			printf("\nPlayer %d wins with a %s (%s)\n", k+1, HandNames[winner.hand], CardName[winner.highCard]);
+			winner = handArray[k];	
 	}
-	printf("\nPlayer %d wins with a %s (%s)\n",winNum, HandNames[winner.hand], CardName[winner.highCard]);
+	
+	for (int l = 0; l < playerNum; l++)
+	{
+		if(winner.hand == handArray[l].hand && winner.highCard == handArray[l].highCard)
+			printf("\nPlayer %d wins with a %s (%s)\n", l+1, HandNames[winner.hand], CardName[winner.highCard]);
+	}
+
+	free(handArray);
 	return;
 }

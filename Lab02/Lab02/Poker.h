@@ -2,7 +2,7 @@
 #pragma once
 #include "Deck.h"
 
-static const unsigned int playerNum = 4;
+
 static const unsigned int handSize = 5;
 
 typedef enum pokerHand
