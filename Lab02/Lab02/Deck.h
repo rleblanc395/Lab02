@@ -1,8 +1,21 @@
 #ifndef DECKH
 #pragma once
 
-typedef unsigned int uint;
-typedef enum suit
+/************************************************************
+*  File:       Deck.h
+*  Project:    Lab 2
+*  Author:     Ryan LeBlanc
+*  Version:    1.0
+*  Date:       14 Mar 2020
+*  Course:     CMPE1700
+*  Instructor: AJ Armstrong
+*  Description: Declaration of an enum of card types and values,
+*  a structre that stores a card's type and value, and a series
+*  of methods used to create a generic deck of 52 cards
+*  See deck.c for implementation
+* *********************************************************/
+
+typedef enum suit // the suits of playing cards
 {
 	Clubs,
 	Diamonds,
@@ -10,7 +23,7 @@ typedef enum suit
 	Spades
 }Suits;
 
-typedef enum value
+typedef enum value // the values of playing cards
 {
 	Deuce,
 	Three,
@@ -29,12 +42,14 @@ typedef enum value
 
 typedef struct card
 {
-	Suits suit;
-	CardValue value;
+	Suits suit; // suit of the card
+	CardValue value; // value of the card
 }Card;
 
 //Look up table for card values
-static const char* CardName[] = { "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace" };
+static const char* CardName[] = { "Deuce", "Three", "Four", 
+								  "Five", "Six", "Seven", "Eight", "Nine", 
+								  "Ten", "Jack", "Queen", "King", "Ace" };
 // Look up table for suits
 static const char* Suit[] = { "Clubs", "Diamonds", "Hearts", "Spades" };
 
